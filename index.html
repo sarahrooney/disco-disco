@@ -1,0 +1,135 @@
+<style>
+  .disco {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .disco--red {
+    position: absolute;
+    top: 6.2em;
+    left: .9em;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    font-size: 25px;
+    font-family: monospace;
+    animation: discoRed 1s steps(1) infinite;
+  }
+  .disco--red:nth-of-type(2) {
+    top: 7.39em;
+    left: 3.3em;
+  }
+  .disco--red:nth-of-type(3) {
+    top: 5.1em;
+    left: 3.3em;
+  }
+  
+  @keyframes discoRed {
+    0% {
+      color: #000000;
+    }
+    50% {
+      color: #ff0000;
+    }
+    100% {
+      color: #000000;
+    }
+  }
+  
+  .disco--blue {
+    position: absolute;
+    top: 7.4em;
+    left: 1.5em;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    font-size: 25px;
+    font-family: monospace;
+    animation: discoBlue 1s steps(1) infinite;
+  }
+  
+  @keyframes discoBlue {
+    0% {
+      color: #000000;
+    }
+    50% {
+      color: #0000ff;
+    }
+    100% {
+      color: #000000;
+    }
+  }
+  
+  .face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  
+  .face::after {
+    content: '<(^.^<)';
+    font-size: 25px;
+    font-family: monospace;
+    color: #000000;
+    animation: danceDance 5s linear infinite;
+  }
+  
+  @keyframes danceDance {
+    0%{
+      content: "<(^.^<)";
+    }
+    10% {
+      content: "(>^.^)>";
+    }
+    20% {
+      content: "<(^.^<)";
+    }
+    30% {
+      content: "(>^.^)>";
+    }
+    40% {
+      content: "^('.')^";
+    }
+    50% {
+      content: "^('.')~";
+    }
+    60% {
+      content: "^('.')^";
+    }
+    70% {
+      content: "~('.')^";
+    }
+    80% {
+      content: "^('.')^";
+    }
+    90% {
+      content: "^('.')~";
+    }
+    100% {
+      content: "^('.')^";
+    }
+  }
+</style>
+
+<body>
+  <div class="disco">
+<pre>
+   |
+   |
+   |
+ #####
+#######
+#######
+ #####
+</pre>  
+    <div class="disco disco--red">#</div>
+    <div class="disco disco--red">#</div>
+    <div class="disco disco--red">#</div>
+    <div class="disco disco--blue">#</div>
+  </div>
+  <div class="face"></div>
+</body>
